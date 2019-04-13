@@ -11,10 +11,8 @@ int main(int args, char ** argv){
     Sphere sp(coordX, coordZ, deltaRho, radius);
     LinSpace1D x(-1000,1000);
     std::cout << sp << std::endl;
-    for (int i = 0; i<10000; i++){
-        Anomaly1D an(&x,&sp);
-        an.calculateAnomaly();
-    }
+    Anomaly1D an(&x,&sp);
+    an.calculateAnomaly();
     //an.writeAnomaly("anomaly.xy");
     return 0;
 }

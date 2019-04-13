@@ -8,6 +8,7 @@ Sphere::Sphere(double coordX, double coordZ, double deltaRho,double radius){
     }
 
 Sphere::Sphere(){
+    //default constructor
     this->coordX = 50;
     this->coordZ = -100;
     this->deltaRho = 1000;
