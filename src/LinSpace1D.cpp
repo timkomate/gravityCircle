@@ -29,6 +29,21 @@ LinSpace1D::LinSpace1D(double from, double to){
     }
 }
 
+double LinSpace1D::getFrom(){
+    return from;
+}
+double LinSpace1D::getTo(){
+    return to;
+}
+
+double LinSpace1D::getStepSize(){
+    return stepSize;
+}
+
+std::vector<double> LinSpace1D::getContainer(){
+    return container;
+}
+
 std::ostream & operator << (std::ostream &out, const LinSpace1D &linSpace1D){
     out << "The vector contains the following elements:" << std::endl;
     for (int i = 0; i < linSpace1D.container.size(); i++){
@@ -37,3 +52,5 @@ std::ostream & operator << (std::ostream &out, const LinSpace1D &linSpace1D){
     out << std::endl;
     return out;
 }
+
+

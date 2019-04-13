@@ -22,6 +22,10 @@ class Sphere{
     public:
         Sphere(double coordX, double coordZ, double deltaRho,double radius);
         Sphere();
+        double getCoordX();
+        double getCoordZ();
+        double getDeltaRho();
+        double getRadius();
 };
 
 

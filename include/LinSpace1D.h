@@ -20,6 +20,10 @@ class LinSpace1D{
         LinSpace1D(double from, double to, double stepSize);
         LinSpace1D(double from, double to);
         LinSpace1D();
+        double getFrom();
+        double getTo();
+        double getStepSize();
+        std::vector<double> getContainer();
 };
 
 
