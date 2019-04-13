@@ -6,13 +6,22 @@
 #define GRAVITYSPHERE_SPHERE_H
 
 #include<iostream>
+/*
+radius: radius of sphere;
+coordX: is horizontal offset
+coordZ: is depth
+deldaRho: is the density contrast
+*/
 class Sphere{
     private:
-        coordX;
-        coordZ;
-        deltaRho;
-        radius;
-
+        double coordX;
+        double coordZ;
+        double deltaRho;
+        double radius;
+        friend std::ostream & operator << (std::ostream &out, const Sphere &sphere);
+    public:
+        Sphere(double coordX, double coordZ, double deltaRho,double radius);
+        Sphere();
 };
 
 
