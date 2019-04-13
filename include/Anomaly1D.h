@@ -13,10 +13,10 @@
 class Anomaly1D{
     private:
         std::vector<double> anomaly;
-        LinSpace1D x;
-        Sphere sp;
+        LinSpace1D* x;
+        Sphere* sp;
     public:
-        Anomaly1D(LinSpace1D x, Sphere sp);
+        Anomaly1D(LinSpace1D* x, Sphere* sp);
         void calculateAnomaly();
         void writeAnomaly(std::string fileName);
 };
