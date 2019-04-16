@@ -9,11 +9,12 @@ int main(int args, char ** argv){
     double deltaRho = atof(argv[3]);
     double radius = atof(argv[4]);
     //Sphere sp(coordX, coordZ, deltaRho, radius);
-    LinSpace1D * x = new LinSpace1D(-1000,1000);
+    LinSpace1D * x = new LinSpace1D(-100,100);
     Sphere * sp = new Sphere(coordX,coordZ,deltaRho,radius);
     //std::cout << &sp << std::endl;
     Anomaly1D an(x,sp);
     an.calculateAnomaly();
+    an.addNoise(0,0.002);
     an.writeAnomaly("anomaly.xy");
     return 0;
 }

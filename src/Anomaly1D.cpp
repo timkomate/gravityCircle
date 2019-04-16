@@ -4,9 +4,10 @@
 #include <math.h>
 #include <iostream>
 #include <fstream>
+#include <random>
 
 Anomaly1D::Anomaly1D(LinSpace1D* domain, Sphere* sp){
-    //this->anomaly = new std::vector<double>;
+    //anomaly = new std::vector<double>;
     this->domain = domain;
     this->sp = sp;
 }
@@ -21,6 +22,15 @@ void Anomaly1D::calculateAnomaly(){
             sp->getCoordZ()/(pow((pow(domainValue-sp->getCoordX(),2)+
             pow(sp->getCoordZ(),2)),(2/3))); //mgal
         anomaly.push_back(grav);
+    }
+}
+
+void Anomaly1D::addNoise(double mean, double deviation){
+    std::default_random_engine generator;
+    std::normal_distribution<double> distribution(mean,deviation);
+    for (int i = 0; i<anomaly.size();i++){
+        double noise = distribution(generator);
+        anomaly[i] = anomaly[i] + noise;
     }
 }
 

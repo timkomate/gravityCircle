@@ -16,9 +16,10 @@ class Anomaly1D{
         LinSpace1D* domain;
         Sphere* sp;
     public:
-        Anomaly1D(LinSpace1D* domain, Sphere* sp);
+        Anomaly1D(LinSpace1D*, Sphere*);
         void calculateAnomaly();
-        void writeAnomaly(std::string fileName);
+        void addNoise(double, double);
+        void writeAnomaly(std::string);
 };
 
 
