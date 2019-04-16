@@ -23,6 +23,7 @@ class LinSpace1D{
         double getFrom();
         double getTo();
         double getStepSize();
+        double getElement(int);
         std::vector<double> getContainer();
 };
 

@@ -44,6 +44,10 @@ std::vector<double> LinSpace1D::getContainer(){
     return container;
 }
 
+double LinSpace1D::getElement(int i){
+    return container[i];
+}
+
 std::ostream & operator << (std::ostream &out, const LinSpace1D &linSpace1D){
     out << "The vector contains the following elements:" << std::endl;
     for (int i = 0; i < linSpace1D.container.size(); i++){

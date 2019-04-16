@@ -28,7 +28,7 @@ void Anomaly1D::writeAnomaly(std::string fileName){
     std::ofstream outputFile;
     outputFile.open(fileName);
     for (int i = 0; i < domain->getContainer().size();i++){
-        outputFile << domain[i] << " " << anomaly[i] << std::endl;
+        outputFile << domain->getElement(i) << " " << anomaly[i] << std::endl;
     }
     outputFile.close();
 }
